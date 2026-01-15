@@ -1,4 +1,4 @@
-# npm-push
+# bun-push
 
 <div align="center">
 
@@ -29,21 +29,21 @@
 
 ```bash
 # 使用 bun
-bun add -g npm-push
+bun add -g bun-push
 
 # 或使用 npm
-npm install -g npm-push
+npm install -g bun-push
 
 # 或使用 yarn
-yarn global add npm-push
+yarn global add bun-push
 
 # 或使用 pnpm
-pnpm add -g npm-push
+pnpm add -g bun-push
 ```
 
 ## 🌍 多语言支持
 
-npm-push 支持以下语言：
+bun-push 支持以下语言：
 - 🇨🇳 中文 (Chinese) - **默认语言**
 - 🇺🇸 English
 - 🇯🇵 日本語 (Japanese)
@@ -55,20 +55,20 @@ npm-push 支持以下语言：
 
 ```bash
 # 设置语言为英文
-export NPM_PUSH_LANG=en
-npm-push
+export BUN_PUSH_LANG=en
+bun-push
 
 # 设置语言为日语
-export NPM_PUSH_LANG=ja
-npm-push
+export BUN_PUSH_LANG=ja
+bun-push
 
 # 设置语言为韩语
-export NPM_PUSH_LANG=ko
-npm-push
+export BUN_PUSH_LANG=ko
+bun-push
 
 # 设置语言为中文
-export NPM_PUSH_LANG=zh
-npm-push
+export BUN_PUSH_LANG=zh
+bun-push
 ```
 
 ## 🚀 使用
@@ -78,7 +78,7 @@ npm-push
 在项目根目录运行：
 
 ```bash
-npm-push
+bun-push
 ```
 
 CLI 会引导您完成以下流程：
@@ -122,7 +122,7 @@ CLI 会引导您完成以下流程：
 ### JS API 方式
 
 ```typescript
-import { NpmPush, publishPackage } from "npm-push";
+import { NpmPush, publishPackage } from "bun-push";
 
 // 方式 1: 使用类
 const npmPush = new NpmPush();
@@ -217,7 +217,7 @@ new NpmPush(workingDir?: string)
 
 ## 📝 Changelog 格式
 
-npm-push 支持自动生成符合 [Keep a Changelog](https://keepachangelog.com/) 规范的 CHANGELOG.md 文件。
+bun-push 支持自动生成符合 [Keep a Changelog](https://keepachangelog.com/) 规范的 CHANGELOG.md 文件。
 
 ### 支持的格式
 
@@ -252,8 +252,8 @@ npm-push 支持自动生成符合 [Keep a Changelog](https://keepachangelog.com/
 
 ```bash
 # 克隆项目
-git clone https://github.com/ccode/npm-push.git
-cd npm-push
+git clone https://github.com/ccode/bun-push.git
+cd bun-push
 
 # 安装依赖
 bun install

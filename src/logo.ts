@@ -1,5 +1,5 @@
 /**
- * npm-push logo 和成功提示
+ * bun-push logo 和成功提示
  */
 import chalk from "chalk";
 import figlet from "figlet";
@@ -11,7 +11,7 @@ import { t } from "./i18n";
 export function showLogo(): void {
   try {
     // 使用 figlet 生成 ASCII art
-    const asciiText = figlet.textSync("npm-push", {
+    const asciiText = figlet.textSync("bun-push", {
       font: "Standard", // 使用标准字体，比较紧凑
       horizontalLayout: "default",
       verticalLayout: "default",
@@ -22,7 +22,7 @@ export function showLogo(): void {
     
     if (lines.length === 0) {
       // 如果 figlet 生成失败，使用简单文本
-      console.log(chalk.cyan.bold("\n  npm-push\n"));
+      console.log(chalk.cyan.bold("\n  bun-push\n"));
       return;
     }
 
@@ -30,7 +30,7 @@ export function showLogo(): void {
       // 根据位置使用不同颜色
       const midPoint = Math.floor(line.length / 2);
       if (index < lines.length / 2) {
-        // 上半部分（npm）使用红色和黄色
+        // 上半部分（bun）使用红色和黄色
         return chalk.red(line.substring(0, midPoint)) + 
                chalk.yellow(line.substring(midPoint));
       } else {
@@ -44,7 +44,7 @@ export function showLogo(): void {
     console.log(logo);
   } catch (error) {
     // 如果 figlet 不可用，使用简单的文本 logo
-    console.log(chalk.cyan.bold("\n  npm-push\n"));
+    console.log(chalk.cyan.bold("\n  bun-push\n"));
   }
 }
 

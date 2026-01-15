@@ -13,7 +13,7 @@ import type { PublishConfig, PublishOptions, PackageInfo } from "./types";
 import { t } from "./i18n";
 
 /**
- * npm-push 类
+ * bun-push 类
  */
 export class NpmPush {
   private workspaceInfo: ReturnType<typeof getWorkspaceInfo>;
@@ -99,7 +99,7 @@ export class NpmPush {
       tag,
       script: options.script,
       pushTag: options.pushTag ?? false,
-      registry: options.registry || "https://registry.npmjs.org/",
+      registry: options.registry || process.env.NPM_CONFIG_REGISTRY || "https://registry.npmjs.org/",
       generateChangelog: options.generateChangelog ?? false,
       otp: options.otp,
     };

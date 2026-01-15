@@ -1,4 +1,4 @@
-# npm-push
+# bun-push
 
 <div align="center">
 
@@ -26,21 +26,21 @@
 
 ```bash
 # bun を使用
-bun add -g npm-push
+bun add -g bun-push
 
 # または npm を使用
-npm install -g npm-push
+npm install -g bun-push
 
 # または yarn を使用
-yarn global add npm-push
+yarn global add bun-push
 
 # または pnpm を使用
-pnpm add -g npm-push
+pnpm add -g bun-push
 ```
 
 ## 🌍 多言語サポート
 
-npm-push は以下の言語をサポートします：
+bun-push は以下の言語をサポートします：
 - 🇨🇳 中国語
 - 🇺🇸 英語
 - 🇯🇵 日本語
@@ -52,20 +52,20 @@ npm-push は以下の言語をサポートします：
 
 ```bash
 # 言語を英語に設定
-export NPM_PUSH_LANG=en
-npm-push
+export BUN_PUSH_LANG=en
+bun-push
 
 # 言語を日本語に設定
-export NPM_PUSH_LANG=ja
-npm-push
+export BUN_PUSH_LANG=ja
+bun-push
 
 # 言語を韓国語に設定
-export NPM_PUSH_LANG=ko
-npm-push
+export BUN_PUSH_LANG=ko
+bun-push
 
 # 言語を中国語に設定
-export NPM_PUSH_LANG=zh
-npm-push
+export BUN_PUSH_LANG=zh
+bun-push
 ```
 
 ## 🚀 使用方法
@@ -75,7 +75,7 @@ npm-push
 プロジェクトのルートディレクトリで実行：
 
 ```bash
-npm-push
+bun-push
 ```
 
 CLI は以下のプロセスを案内します：
@@ -118,7 +118,7 @@ CLI は以下のプロセスを案内します：
 ### JS API モード
 
 ```typescript
-import { NpmPush, publishPackage } from "npm-push";
+import { NpmPush, publishPackage } from "bun-push";
 
 // 方法 1: クラスを使用
 const npmPush = new NpmPush();
@@ -213,7 +213,7 @@ workspace 情報を取得します。
 
 ## 📝 Changelog 形式
 
-npm-push は [Keep a Changelog](https://keepachangelog.com/) 標準に準拠した CHANGELOG.md ファイルの自動生成をサポートします。
+bun-push は [Keep a Changelog](https://keepachangelog.com/) 標準に準拠した CHANGELOG.md ファイルの自動生成をサポートします。
 
 ### サポートされている形式
 
@@ -248,8 +248,8 @@ npm-push は [Keep a Changelog](https://keepachangelog.com/) 標準に準拠し�
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/ccode/npm-push.git
-cd npm-push
+git clone https://github.com/ccode/bun-push.git
+cd bun-push
 
 # 依存関係をインストール
 bun install

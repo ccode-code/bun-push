@@ -1,4 +1,4 @@
-# npm-push
+# bun-push
 
 <div align="center">
 
@@ -26,21 +26,21 @@
 
 ```bash
 # Using bun
-bun add -g npm-push
+bun add -g bun-push
 
 # Or using npm
-npm install -g npm-push
+npm install -g bun-push
 
 # Or using yarn
-yarn global add npm-push
+yarn global add bun-push
 
 # Or using pnpm
-pnpm add -g npm-push
+pnpm add -g bun-push
 ```
 
 ## 🌍 Multi-language Support
 
-npm-push supports the following languages:
+bun-push supports the following languages:
 - 🇨🇳 Chinese - **Default language**
 - 🇺🇸 English
 - 🇯🇵 Japanese
@@ -52,20 +52,20 @@ The tool defaults to Chinese. To manually specify a language, use environment va
 
 ```bash
 # Set language to English
-export NPM_PUSH_LANG=en
-npm-push
+export BUN_PUSH_LANG=en
+bun-push
 
 # Set language to Japanese
-export NPM_PUSH_LANG=ja
-npm-push
+export BUN_PUSH_LANG=ja
+bun-push
 
 # Set language to Korean
-export NPM_PUSH_LANG=ko
-npm-push
+export BUN_PUSH_LANG=ko
+bun-push
 
 # Set language to Chinese
-export NPM_PUSH_LANG=zh
-npm-push
+export BUN_PUSH_LANG=zh
+bun-push
 ```
 
 ## 🚀 Usage
@@ -75,7 +75,7 @@ npm-push
 Run in the project root directory:
 
 ```bash
-npm-push
+bun-push
 ```
 
 The CLI will guide you through the following process:
@@ -119,7 +119,7 @@ The CLI will guide you through the following process:
 ### JS API Mode
 
 ```typescript
-import { NpmPush, publishPackage } from "npm-push";
+import { NpmPush, publishPackage } from "bun-push";
 
 // Method 1: Using class
 const npmPush = new NpmPush();
@@ -214,7 +214,7 @@ Functional API for publishing packages.
 
 ## 📝 Changelog Format
 
-npm-push supports automatically generating CHANGELOG.md files that comply with [Keep a Changelog](https://keepachangelog.com/) standards.
+bun-push supports automatically generating CHANGELOG.md files that comply with [Keep a Changelog](https://keepachangelog.com/) standards.
 
 ### Supported Formats
 
@@ -249,8 +249,8 @@ The generated CHANGELOG.md file will automatically group by type and include ver
 
 ```bash
 # Clone repository
-git clone https://github.com/ccode/npm-push.git
-cd npm-push
+git clone https://github.com/ccode/bun-push.git
+cd bun-push
 
 # Install dependencies
 bun install

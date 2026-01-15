@@ -114,7 +114,7 @@ export default {
     packageName: "パッケージ名",
     version: "バージョン",
     registry: "Registry",
-    thanks: "npm-pushをご利用いただきありがとうございます！",
+    thanks: "bun-pushをご利用いただきありがとうございます！",
   },
 
   // Changelogタイプ

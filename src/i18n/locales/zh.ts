@@ -114,7 +114,7 @@ export default {
     packageName: "包名",
     version: "版本",
     registry: "Registry",
-    thanks: "感谢使用 npm-push！",
+    thanks: "感谢使用 bun-push！",
   },
 
   // Changelog 类型

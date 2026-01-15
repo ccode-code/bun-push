@@ -114,7 +114,7 @@ export default {
     packageName: "패키지 이름",
     version: "버전",
     registry: "Registry",
-    thanks: "npm-push를 사용해 주셔서 감사합니다!",
+    thanks: "bun-push를 사용해 주셔서 감사합니다!",
   },
 
   // Changelog 유형

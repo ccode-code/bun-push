@@ -311,12 +311,12 @@ export async function confirmOtp(): Promise<string | undefined> {
 /**
  * 确认 npm registry 地址
  */
-export async function confirmRegistry(defaultRegistry: string = "https://registry.npmjs.org/"): Promise<string> {
+export async function confirmRegistry(): Promise<string> {
   const { value } = await prompts({
     type: "text",
     name: "value",
     message: t("registry.input"),
-    initial: defaultRegistry,
+    initial: process.env.NPM_CONFIG_REGISTRY || 'https://registry.npmjs.org/',
     validate: (input: string) => {
       if (!input.trim()) {
         return t("registry.empty");

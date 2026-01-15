@@ -114,7 +114,7 @@ export default {
     packageName: "Package name",
     version: "Version",
     registry: "Registry",
-    thanks: "Thanks for using npm-push!",
+    thanks: "Thanks for using bun-push!",
   },
 
   // Changelog types

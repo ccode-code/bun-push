@@ -39,7 +39,7 @@ By submitting code, documentation, or other contributions to this project, you a
 
 ## Trademark
 
-"npm-push" is the name of this project and is not affiliated with npm, Inc. or any other organization.
+"bun-push" is the name of this project and is not affiliated with npm, Inc. or any other organization.
 
 ## Data Privacy
 

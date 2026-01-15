@@ -88,7 +88,7 @@ export function getLanguage(): Language {
  */
 export function initLanguage(): void {
   // 优先检查环境变量
-  const envLang = process.env.NPM_PUSH_LANG as Language | undefined;
+  const envLang = process.env.BUN_PUSH_LANG as Language | undefined;
   if (envLang && SUPPORTED_LANGUAGES.includes(envLang)) {
     currentLanguage = envLang;
     return;

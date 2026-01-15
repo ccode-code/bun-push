@@ -2,7 +2,7 @@ import { build } from "bun";
 
 /**
  * 构建配置文件
- * 将项目打包为 Node.js 兼容的产物
+ * 将项目打包为 Bun 兼容的产物
  * 
  * 使用方式: bun run build.config.ts
  */
@@ -15,8 +15,8 @@ async function buildProject() {
   const cliResult = await build({
     entrypoints: ["./src/cli.ts"],
     outdir: "./dist",
-    target: "node", // 目标平台为 Node.js
-    format: "cjs", // 使用 cjs 模块格式
+    target: "bun", // 目标平台为 Bun
+    format: "esm", // 使用 ESM 模块格式
     external: [
       "prompts",
       "chalk",
@@ -42,8 +42,8 @@ async function buildProject() {
   const apiResult = await build({
     entrypoints: ["./src/index.ts"],
     outdir: "./dist",
-    target: "node", // 目标平台为 Node.js
-    format: "cjs", // 使用 cjs 模块格式
+    target: "bun", // 目标平台为 Bun
+    format: "esm", // 使用 ESM 模块格式
     external: [
       "prompts",
       "chalk",
@@ -78,8 +78,8 @@ async function buildProject() {
     let content = await cliFile.text();
     
     // 如果文件开头没有 shebang，添加它
-    if (!content.startsWith("#!/usr/bin/env node")) {
-      content = "#!/usr/bin/env node\n" + content;
+    if (!content.startsWith("#!/usr/bin/env bun")) {
+      content = "#!/usr/bin/env bun\n" + content;
       await Bun.write(cliFile, content);
       console.log("已添加 shebang 到 CLI 文件");
     }

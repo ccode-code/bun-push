@@ -106,10 +106,12 @@ async function pushGitTag(tag: string): Promise<void> {
 
 /**
  * 检查 npm 登录状态
+ * 使用 bun pm whoami 检查登录状态
  */
 async function checkNpmAuth(registry: string): Promise<void> {
+  // Bun 的包管理器兼容 npm 命令
   const proc = Bun.spawn(
-    ["npm", "whoami", "--registry", registry],
+    ["bun", "pm", "whoami"],
     {
       stdout: "pipe",
       stderr: "pipe",
@@ -144,7 +146,7 @@ async function checkNpmAuth(registry: string): Promise<void> {
  * 发布到 npm
  */
 async function publishToNpm(packagePath: string, registry: string, otp?: string): Promise<void> {
-  const args = ["npm", "publish", "--registry", registry];
+  const args = ["bun", "publish", "--registry", registry];
   
   // 如果提供了 OTP，添加到命令参数中
   if (otp) {
@@ -155,6 +157,10 @@ async function publishToNpm(packagePath: string, registry: string, otp?: string)
     cwd: packagePath,
     stdout: "inherit",
     stderr: "inherit",
+    env: {
+      ...process.env,
+      NPM_CONFIG_REGISTRY: registry,
+    },
   });
 
   const exitCode = await proc.exited;

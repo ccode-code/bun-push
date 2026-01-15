@@ -39,7 +39,7 @@ Copyright (c) 2024 ccode
 
 ## 商标
 
-"npm-push" 是本项目的名称，不隶属于 npm, Inc. 或任何其他组织。
+"bun-push" 是本项目的名称，不隶属于 npm, Inc. 或任何其他组织。
 
 ## 数据隐私
 

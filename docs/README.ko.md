@@ -1,4 +1,4 @@
-# npm-push
+# bun-push
 
 <div align="center">
 
@@ -26,21 +26,21 @@
 
 ```bash
 # bun 사용
-bun add -g npm-push
+bun add -g bun-push
 
 # 또는 npm 사용
-npm install -g npm-push
+npm install -g bun-push
 
 # 또는 yarn 사용
-yarn global add npm-push
+yarn global add bun-push
 
 # 또는 pnpm 사용
-pnpm add -g npm-push
+pnpm add -g bun-push
 ```
 
 ## 🌍 다국어 지원
 
-npm-push는 다음 언어를 지원합니다:
+bun-push는 다음 언어를 지원합니다:
 - 🇨🇳 중국어
 - 🇺🇸 영어
 - 🇯🇵 일본어
@@ -52,20 +52,20 @@ npm-push는 다음 언어를 지원합니다:
 
 ```bash
 # 언어를 영어로 설정
-export NPM_PUSH_LANG=en
-npm-push
+export BUN_PUSH_LANG=en
+bun-push
 
 # 언어를 일본어로 설정
-export NPM_PUSH_LANG=ja
-npm-push
+export BUN_PUSH_LANG=ja
+bun-push
 
 # 언어를 한국어로 설정
-export NPM_PUSH_LANG=ko
-npm-push
+export BUN_PUSH_LANG=ko
+bun-push
 
 # 언어를 중국어로 설정
-export NPM_PUSH_LANG=zh
-npm-push
+export BUN_PUSH_LANG=zh
+bun-push
 ```
 
 ## 🚀 사용법
@@ -75,7 +75,7 @@ npm-push
 프로젝트 루트 디렉토리에서 실행:
 
 ```bash
-npm-push
+bun-push
 ```
 
 CLI는 다음 프로세스를 안내합니다:
@@ -118,7 +118,7 @@ CLI는 다음 프로세스를 안내합니다:
 ### JS API 모드
 
 ```typescript
-import { NpmPush, publishPackage } from "npm-push";
+import { NpmPush, publishPackage } from "bun-push";
 
 // 방법 1: 클래스 사용
 const npmPush = new NpmPush();
@@ -213,7 +213,7 @@ workspace 정보를 가져옵니다.
 
 ## 📝 Changelog 형식
 
-npm-push는 [Keep a Changelog](https://keepachangelog.com/) 표준을 준수하는 CHANGELOG.md 파일의 자동 생성을 지원합니다.
+bun-push는 [Keep a Changelog](https://keepachangelog.com/) 표준을 준수하는 CHANGELOG.md 파일의 자동 생성을 지원합니다.
 
 ### 지원되는 형식
 
@@ -248,8 +248,8 @@ npm-push는 [Keep a Changelog](https://keepachangelog.com/) 표준을 준수하�
 
 ```bash
 # 저장소 클론
-git clone https://github.com/ccode/npm-push.git
-cd npm-push
+git clone https://github.com/ccode/bun-push.git
+cd bun-push
 
 # 의존성 설치
 bun install
