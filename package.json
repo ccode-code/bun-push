@@ -1,6 +1,6 @@
 {
   "name": "bun-push",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "一个支持 monorepo 和单仓库的 npm 包发布工具，支持 CLI 和 JS API 两种使用方式",
   "type": "module",
   "main": "./dist/index.js",
@@ -14,8 +14,8 @@
   ],
   "scripts": {
     "build": "bun test && bun run build.config.ts",
-    "dev": "bun run --watch src/cli.ts",
-    "test": "bun test"
+    "test": "bun test",
+    "push": "bun run src/cli.ts"
   },
   "keywords": [
     "npm",
