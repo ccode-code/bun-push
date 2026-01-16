@@ -15,7 +15,7 @@
   "scripts": {
     "build": "bun test && bun run build.config.ts",
     "test": "bun test",
-    "test:ci": "bun test --timeout 30000 --reporter verbose",
+    "test:ci": "bun test --timeout 30000",
     "push": "bun run src/cli.ts"
   },
   "keywords": [
