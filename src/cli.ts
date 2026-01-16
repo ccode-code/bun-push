@@ -14,14 +14,12 @@ import {
   inputChangelog,
   selectVersion,
   selectScript,
-  confirmPushTag,
   confirmRegistry,
   confirmOtp,
   confirmPublish,
   confirmGenerateChangelog,
 } from "./prompts";
 import { runScript } from "./utils/scripts";
-import { generateTag } from "./utils/version";
 import { publish } from "./publisher";
 import { showLogo, showSuccessMessage } from "./logo";
 import type { PublishConfig } from "./types";
@@ -60,9 +58,6 @@ async function main() {
       newVersion
     );
 
-    // 生成 tag
-    const tag = generateTag(selectedPackage.name, newVersion);
-
     // 选择脚本
     const script = await selectScript(selectedPackage);
 
@@ -78,9 +73,6 @@ async function main() {
       }
     }
 
-    // 确认是否推送 tag
-    const pushTag = await confirmPushTag();
-
     // 确认 registry
     const registry = await confirmRegistry();
 
@@ -95,9 +87,7 @@ async function main() {
       package: selectedPackage,
       changelog,
       newVersion,
-      tag,
       script,
-      pushTag,
       registry,
       generateChangelog,
       otp,

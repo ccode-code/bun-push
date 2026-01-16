@@ -1,5 +1,6 @@
 /**
  * Changelog 工具函数测试
+ * 支持 CI/CD 环境
  */
 import { describe, test, expect, beforeEach, afterEach } from "bun:test";
 import { mkdir, writeFile, rm } from "fs/promises";
@@ -13,8 +14,8 @@ import {
   type ChangelogEntry,
 } from "./changelog";
 
-// 临时测试目录
-const TEST_DIR = join(process.cwd(), ".test-tmp-changelog");
+// 临时测试目录（使用进程 ID 避免并行测试冲突）
+const TEST_DIR = join(process.cwd(), `.test-tmp-changelog-${process.pid}`);
 
 describe("Changelog 工具函数", () => {
   beforeEach(async () => {

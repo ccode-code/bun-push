@@ -248,24 +248,6 @@ export async function selectScript(packageInfo: PackageInfo): Promise<string | u
 }
 
 /**
- * 确认是否推送 git tag
- */
-export async function confirmPushTag(): Promise<boolean> {
-  const { value } = await prompts({
-    type: "confirm",
-    name: "value",
-    message: t("git.pushTag"),
-    initial: true,
-  });
-
-  if (value === undefined) {
-    process.exit(0);
-  }
-
-  return value;
-}
-
-/**
  * 确认是否需要输入 npm OTP
  */
 export async function confirmOtp(): Promise<string | undefined> {
@@ -346,10 +328,8 @@ export async function confirmPublish(config: PublishConfig): Promise<boolean> {
   console.log(chalk.cyan(`${t("publish.packageName")}:`), config.package.name);
   console.log(chalk.cyan(`${t("publish.currentVersion")}:`), config.package.version);
   console.log(chalk.cyan(`${t("publish.newVersion")}:`), config.newVersion);
-  console.log(chalk.cyan(`${t("publish.tag")}:`), config.tag);
   console.log(chalk.cyan(`${t("publish.changelog")}:`), config.changelog);
   console.log(chalk.cyan(`${t("publish.registry")}:`), config.registry);
-  console.log(chalk.cyan(`${t("publish.pushTag")}:`), config.pushTag ? t("common.yes") : t("common.no"));
   console.log(chalk.cyan(`${t("publish.generateChangelog")}:`), config.generateChangelog ? t("common.yes") : t("common.no"));
   if (config.otp) {
     console.log(chalk.cyan(`${t("publish.otp")}:`), chalk.gray("***"));

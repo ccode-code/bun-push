@@ -5,7 +5,6 @@ import { describe, test, expect } from "bun:test";
 import {
   getNextVersion,
   isValidVersion,
-  generateTag,
   getReleaseTypeDescription,
   RELEASE_TYPES,
 } from "./version";
@@ -51,22 +50,6 @@ describe("版本管理工具函数", () => {
       expect(isValidVersion("1")).toBe(false);
       expect(isValidVersion("")).toBe(false);
       expect(isValidVersion("1.0.0.0")).toBe(false);
-    });
-  });
-
-  describe("generateTag", () => {
-    test("应该为普通包名生成 tag", () => {
-      expect(generateTag("my-package", "1.0.0")).toBe("my-package@1.0.0");
-      expect(generateTag("test-pkg", "2.3.4")).toBe("test-pkg@2.3.4");
-    });
-
-    test("应该移除 scoped 包的前缀", () => {
-      expect(generateTag("@scope/package", "1.0.0")).toBe("package@1.0.0");
-      expect(generateTag("@myorg/mypkg", "2.0.0")).toBe("mypkg@2.0.0");
-    });
-
-    test("应该处理复杂的包名", () => {
-      expect(generateTag("@scope/sub-package", "1.2.3")).toBe("sub-package@1.2.3");
     });
   });
 

@@ -1,13 +1,14 @@
 /**
  * Workspace 工具函数测试
+ * 支持 CI/CD 环境
  */
 import { describe, test, expect, beforeEach, afterEach } from "bun:test";
 import { mkdir, writeFile, rm } from "fs/promises";
 import { join } from "path";
 import { getWorkspaceInfo, findPackageByName, findPackageByPath } from "./workspace";
 
-// 临时测试目录
-const TEST_DIR = join(process.cwd(), ".test-tmp");
+// 临时测试目录（使用进程 ID 避免并行测试冲突）
+const TEST_DIR = join(process.cwd(), `.test-tmp-${process.pid}`);
 
 describe("Workspace 工具函数", () => {
   beforeEach(async () => {

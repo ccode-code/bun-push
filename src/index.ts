@@ -5,7 +5,7 @@
  * Licensed under the MIT License
  */
 import { getWorkspaceInfo } from "./utils/workspace";
-import { generateTag, getNextVersion, isValidVersion } from "./utils/version";
+import { getNextVersion, isValidVersion } from "./utils/version";
 import { runScript } from "./utils/scripts";
 import { publish } from "./publisher";
 import { resolve } from "path";
@@ -83,9 +83,6 @@ export class NpmPush {
     // 确定 changelog
     const changelog = options.changelog || "";
 
-    // 确定 tag
-    const tag = options.tag || generateTag(targetPackage.name, newVersion);
-
     // 执行脚本（如果指定）
     if (options.script) {
       await runScript(targetPackage, options.script);
@@ -96,9 +93,7 @@ export class NpmPush {
       package: targetPackage,
       changelog,
       newVersion,
-      tag,
       script: options.script,
-      pushTag: options.pushTag ?? false,
       registry: options.registry || process.env.NPM_CONFIG_REGISTRY || "https://registry.npmjs.org/",
       generateChangelog: options.generateChangelog ?? false,
       otp: options.otp,
@@ -122,5 +117,5 @@ export type { PublishOptions, PublishConfig, PackageInfo, WorkspaceInfo } from "
 
 // 导出工具函数
 export { getWorkspaceInfo } from "./utils/workspace";
-export { generateTag, getNextVersion, isValidVersion } from "./utils/version";
+export { getNextVersion, isValidVersion } from "./utils/version";
 export { getPackageScripts, runScript } from "./utils/scripts";

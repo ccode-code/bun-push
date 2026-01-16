@@ -40,12 +40,8 @@ export interface PublishConfig {
   changelog: string;
   /** 新版本号 */
   newVersion: string;
-  /** git tag 名称 */
-  tag: string;
   /** 需要执行的脚本 */
   script?: string;
-  /** 是否推送 git tag */
-  pushTag: boolean;
   /** npm registry 地址 */
   registry: string;
   /** 是否生成 changelog 文件 */
@@ -66,12 +62,8 @@ export interface PublishOptions {
   version?: string;
   /** 自定义 changelog（跳过交互） */
   changelog?: string;
-  /** 自定义 tag（跳过交互） */
-  tag?: string;
   /** 要执行的脚本 */
   script?: string;
-  /** 是否推送 git tag */
-  pushTag?: boolean;
   /** npm registry 地址 */
   registry?: string;
   /** 是否生成 changelog 文件 */

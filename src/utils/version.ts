@@ -68,15 +68,6 @@ export function isValidVersion(version: string): boolean {
 }
 
 /**
- * 生成 git tag 名称
- */
-export function generateTag(packageName: string, version: string): string {
-  // 移除 @scope/ 前缀（如果有）
-  const nameWithoutScope = packageName.replace(/^@[^/]+\//, "");
-  return `${nameWithoutScope}@${version}`;
-}
-
-/**
  * 获取发布类型的描述
  */
 export function getReleaseTypeDescription(type: StandardReleaseType): string {

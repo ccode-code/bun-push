@@ -1,13 +1,13 @@
+# Bun 配置文件
+# 用于配置 Bun 的行为
+
 [install]
-# 自动安装 peer dependencies
-peer = true
-# 自动安装可选依赖
-optional = true
-# 开发依赖
-dev = true
 # 使用 npm 官方仓库镜像
 registry = "https://registry.npmjs.org/"
 
 [test]
-# 使用 bun test 运行测试
+# 测试超时时间（毫秒）- 适用于 CI/CD 环境
 timeout = 30000
+
+# 测试预加载脚本（在运行测试前执行）
+# preload = ["./test-setup.ts"]
